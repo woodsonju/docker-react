@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-      - run: docker build -t woodson31/react-test -f Dockerfile.dev .
-      - run: docker run -e CI=true woodson31/react-test npm test
+      - run: docker build -t woodson31/docker-react -f Dockerfile.dev .
+      - run: docker run -e CI=true woodson31/docker-react npm run test
