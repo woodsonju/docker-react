@@ -23,7 +23,7 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
           application_name: "frontend"
           environment_name: "Frontend-env"
-          bucket_name: "elasticbeanstalk-eu-north-1-244704555729"
+          existing_bucket_name: "elasticbeanstalk-eu-north-1-244704555729"
           version_label: ${{ github.sha }}
           region: "eu-north-1"
-          bucket_key: "deploy.zip"
+          deployment_package: "deploy.zip"
